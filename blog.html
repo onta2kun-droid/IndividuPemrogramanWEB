@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Saya | Richardo Reksi Ratag</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-slate-950 text-white overflow-x-hidden">
+  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.14),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(99,102,241,0.16),_transparent_30%),linear-gradient(to_bottom,_#020617,_#0f172a)]"></div>
+
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
+    <nav class="mx-auto flex w-full max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="index.html" class="text-xl font-bold tracking-tight">
+        Richardo<span class="text-sky-400">.</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-7 text-sm text-slate-300">
+        <a href="index.html" class="transition hover:text-white">Beranda</a>
+        <a href="blog.html" class="font-semibold text-white">Blog</a>
+        <a href="cv.html" class="transition hover:text-white">CV</a>
+        <a href="kontak.html" class="transition hover:text-white">Kontak</a>
+      </div>
+
+      <button class="menu-toggle md:hidden rounded-xl border border-white/10 px-3 py-2 text-white">
+        ☰
+      </button>
+    </nav>
+
+    <div class="mobile-menu hidden border-t border-white/10 px-4 py-4 md:hidden sm:px-6">
+      <div class="flex flex-col gap-3 text-sm text-slate-300">
+        <a href="index.html">Beranda</a>
+        <a href="blog.html" class="text-white">Blog</a>
+        <a href="cv.html">CV</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto w-full max-w-[1400px] px-4 py-8 sm:px-6 md:py-10 lg:px-8">
+    <section class="grid gap-8 lg:grid-cols-12 lg:items-start">
+      <div class="lg:col-span-7 xl:col-span-7 pt-2">
+        <p class="inline-flex rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-sm font-medium text-sky-200">
+          Website Blog Pribadi
+        </p>
+
+        <h1 class="mt-5 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+          Halo, Saya Richardo<br class="hidden sm:block" />
+          Reksi Ratag
+        </h1>
+
+        <p class="mt-6 max-w-3xl text-slate-300 text-base leading-8 sm:text-lg">
+          Saya adalah mahasiswa Pendidikan Komputer di FKIP Universitas Mulawarman.
+          Saya memiliki minat pada pengembangan web, pemrograman, jaringan komputer,
+          serta cyber security.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="https://youtube.com/@wessangel7134" target="_blank" rel="noopener noreferrer"
+            class="rounded-2xl bg-red-500 px-6 py-3 font-semibold text-white transition hover:-translate-y-1 hover:bg-red-600">
+            Kunjungi Channel YouTube
+          </a>
+
+          <a href="#galeri-blog"
+            class="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-1 hover:bg-white/10">
+            Lihat Foto
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 xl:col-span-5">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl sm:p-5 lg:p-6">
+          <img
+            src="profile.jpg"
+            alt="Foto Profil Richardo"
+            class="h-[260px] w-full rounded-2xl object-cover sm:h-[320px] lg:h-[380px] xl:h-[420px]"
+          />
+
+          <h2 class="mt-5 text-2xl font-bold">Informasi Singkat</h2>
+          <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-300 sm:text-base">
+            <li><span class="font-semibold text-white">Nama:</span> Richardo Reksi Ratag</li>
+            <li><span class="font-semibold text-white">Tanggal Lahir:</span> 10 April 2006</li>
+            <li><span class="font-semibold text-white">Tempat Lahir:</span> Tanah Grogot</li>
+            <li><span class="font-semibold text-white">Pendidikan:</span> Mahasiswa Pendidikan Komputer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="konten" class="mt-16">
+      <div class="mb-6">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sky-300">Konten Unggulan</p>
+        <h2 class="mt-2 text-3xl font-bold sm:text-4xl">Video Pembelajaran</h2>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <div class="aspect-video overflow-hidden">
+            <iframe class="h-full w-full" src="https://www.youtube.com/embed/oXCtKDMfYO4" title="Video 1" allowfullscreen></iframe>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold">Tutorial Pembelajaran Web</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-300">
+              Konten pembelajaran seputar pemrograman dan pengembangan web.
+            </p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <div class="aspect-video overflow-hidden">
+            <iframe class="h-full w-full" src="https://www.youtube.com/embed/cs37wdgOKnU" title="Video 2" allowfullscreen></iframe>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold">Materi Cyber Security Dasar</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-300">
+              Dokumentasi dan pembelajaran seputar cyber security serta jaringan komputer.
+            </p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1 md:col-span-2 xl:col-span-1">
+          <div class="aspect-video overflow-hidden">
+            <iframe class="h-full w-full" src="https://www.youtube.com/embed/7qomr6xsMI0" title="Video 3" allowfullscreen></iframe>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold">Praktik Sistem dan Linux</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-300">
+              Proses belajar dan praktik sistem, hosting, Linux, dan teknologi lainnya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeri-blog" class="mt-16">
+      <div class="mb-6">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sky-300">Galeri</p>
+        <h2 class="mt-2 text-3xl font-bold sm:text-4xl">Foto & Dokumentasi</h2>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl sm:p-6 lg:p-8">
+        <div class="grid gap-8 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-6 xl:col-span-6">
+            <h3 class="mb-3 text-xl font-bold sm:text-2xl">Gallery Saya</h3>
+            <p class="max-w-3xl text-slate-300 leading-7 sm:text-base">
+              Kumpulan foto dokumentasi, kegiatan, project, dan momen lain yang ingin saya tampilkan.
+            </p>
+
+            <a href="gallery.html"
+              class="mt-6 inline-block rounded-2xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:-translate-y-1 hover:bg-sky-600">
+              Buka Gallery
+            </a>
+          </div>
+
+          <div class="lg:col-span-6 xl:col-span-6">
+            <div class="grid grid-cols-2 gap-4">
+              <img src="images/foto1.jpg" alt="Preview Gallery 1"
+                class="h-40 w-full rounded-2xl border border-white/10 object-cover transition hover:scale-[1.03] sm:h-44 md:h-48">
+              <img src="images/foto2.JPG" alt="Preview Gallery 2"
+                class="h-40 w-full rounded-2xl border border-white/10 object-cover transition hover:scale-[1.03] sm:h-44 md:h-48">
+              <img src="images/foto3.JPG" alt="Preview Gallery 3"
+                class="h-40 w-full rounded-2xl border border-white/10 object-cover transition hover:scale-[1.03] sm:h-44 md:h-48">
+              <img src="images/foto4.JPG" alt="Preview Gallery 4"
+                class="h-40 w-full rounded-2xl border border-white/10 object-cover transition hover:scale-[1.03] sm:h-44 md:h-48">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

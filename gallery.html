@@ -4,73 +4,174 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | Richardo Reksi Ratag</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="bg-blur blur-1"></div>
-  <div class="bg-blur blur-2"></div>
+<body class="bg-slate-950 text-white overflow-x-hidden">
 
-  <header class="header">
-    <nav class="navbar container">
-      <a href="index.html" class="logo">Richardo<span>.</span></a>
+  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.14),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(99,102,241,0.16),_transparent_30%),linear-gradient(to_bottom,_#020617,_#0f172a)]"></div>
 
-      <ul class="nav-links">
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="index.html#tentang">Tentang</a></li>
-        <li><a href="index.html#portofolio">Portofolio</a></li>
-        <li><a href="index.html#youtube">YouTube</a></li>
-        <li><a href="index.html#kontak">Kontak</a></li>
-      </ul>
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
+    <nav class="mx-auto flex w-full max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="index.html" class="text-xl font-bold tracking-tight">
+        Richardo<span class="text-sky-400">.</span>
+      </a>
 
-      <button class="menu-toggle" aria-label="Buka menu">☰</button>
-    </nav>
-  </header>
-
-  <main class="container">
-    <section class="section reveal">
-      <div class="section-title">
-        <p>Gallery</p>
-        <h2>Kumpulan Foto Saya</h2>
+      <div class="hidden md:flex items-center gap-7 text-sm text-slate-300">
+        <a href="index.html" class="transition hover:text-white">Beranda</a>
+        <a href="blog.html" class="font-semibold text-white">Blog</a>
+        <a href="cv.html" class="transition hover:text-white">CV</a>
+        <a href="kontak.html" class="transition hover:text-white">Kontak</a>
       </div>
 
-        <div class="gallery-page-grid">
-        <img src="images/foto1.jpg" alt="Beginning?" class="gallery-item">
-        <img src="images/foto2.JPG" alt="Fotografi #1" class="gallery-item">
-        <img src="images/foto3.JPG" alt="Fotografi #2" class="gallery-item">
-        <img src="images/foto4.JPG" alt="Friends From High School" class="gallery-item">
-        <img src="images/foto5.JPG" alt="Short Movie Production Crew (Juara 2)" class="gallery-item">
-        <img src="images/foto6.JPG" alt="Cyber Security Partner at High School" class="gallery-item">
-        <img src="images/foto7.jpeg" alt="Beach" class="gallery-item">
-        <img src="images/foto8.jpeg" alt="Good Friend" class="gallery-item">
-        <img src="images/foto9.jpeg" alt="The LKS Province Team (All Star)" class="gallery-item">
-        <img src="images/foto10.jpg" alt="Me" class="gallery-item">
-        <img src="images/foto11.jpeg" alt="PI ROMXKWH" class="gallery-item">
-        <img src="images/foto12.jpeg" alt="PUBDOK ROMXKWH" class="gallery-item">
-        <img src="images/foto13.jpeg" alt="ROMXKWH" class="gallery-item">
-        <img src="images/foto14.jpeg" alt="KTB WITH KAK CHARLOS" class="gallery-item">
-        <img src="images/foto15.jpg" alt="Lowkey IDK" class="gallery-item">
-        <img src="images/foto16.JPG" alt="Studying?" class="gallery-item">
+      <button class="menu-toggle md:hidden rounded-xl border border-white/10 px-3 py-2 text-white">
+        ☰
+      </button>
+    </nav>
+
+    <div class="mobile-menu hidden border-t border-white/10 px-4 py-4 md:hidden sm:px-6">
+      <div class="flex flex-col gap-3 text-sm text-slate-300">
+        <a href="index.html">Beranda</a>
+        <a href="blog.html" class="text-white">Blog</a>
+        <a href="cv.html">CV</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto w-full max-w-[1400px] px-4 py-8 sm:px-6 md:py-10 lg:px-8">
+    <section class="reveal">
+      <div class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sky-300">Gallery</p>
+        <h1 class="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
+          Kumpulan Foto Saya
+        </h1>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl sm:p-6 md:p-8">
+        <div class="grid gap-8 lg:grid-cols-[1.2fr,0.8fr] lg:items-center">
+          <div>
+            <h2 class="text-2xl font-bold sm:text-3xl">Foto & Dokumentasi</h2>
+            <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
+              Halaman ini berisi kumpulan foto dokumentasi, kegiatan, pertemanan,
+              proses belajar, dan beberapa momen berkesan yang ingin saya tampilkan.
+              Klik salah satu foto untuk melihat preview penuh, lalu gunakan tombol
+              kiri atau kanan untuk berpindah foto.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-4">
+              <a href="blog.html"
+                class="rounded-2xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:-translate-y-1 hover:bg-sky-600">
+                Kembali ke Blog
+              </a>
+            </div>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-1">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+              <span class="block text-3xl font-extrabold text-white">16</span>
+              <p class="mt-2 text-sm text-slate-300">Total Foto</p>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto1.jpg" alt="Beginning?" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">Beginning?</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto2.JPG" alt="Fotografi #1" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">Fotografi #1</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto3.JPG" alt="Fotografi #2" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">Fotografi #2</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto4.JPG" alt="Friends From High School" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">Friends From High School</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto5.JPG" alt="Short Movie Production Crew (Juara 2)" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">Short Movie Production Crew (Juara 2)</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto6.JPG" alt="Cyber Security Partner at High School" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">Cyber Security Partner at High School</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto7.jpeg" alt="Beach" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">Beach</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto8.jpeg" alt="Good Friend" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">Good Friend</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto9.jpeg" alt="The LKS Province Team (All Star)" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">The LKS Province Team (All Star)</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto10.jpg" alt="Me" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">Me</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto11.jpeg" alt="PI ROMXKWH" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">PI ROMXKWH</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto12.jpeg" alt="PUBDOK ROMXKWH" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">PUBDOK ROMXKWH</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto13.jpeg" alt="ROMXKWH" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">ROMXKWH</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto14.jpeg" alt="KTB WITH KAK CHARLOS" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">KTB WITH KAK CHARLOS</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto15.jpg" alt="Lowkey IDK" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">Lowkey IDK</figcaption>
+        </figure>
+
+        <figure class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1">
+          <img src="images/foto16.JPG" alt="Studying?" class="gallery-item h-72 w-full cursor-pointer object-cover transition hover:scale-[1.03]" />
+          <figcaption class="p-4 text-sm text-slate-300">Studying?</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Tutup preview">&times;</button>
-    <button class="lightbox-btn prev" id="prevBtn" aria-label="Foto sebelumnya">&#10094;</button>
-
+  <div id="lightbox" class="lightbox">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Tutup">×</button>
+    <button id="prevBtn" class="lightbox-btn" aria-label="Sebelumnya">❮</button>
     <div class="lightbox-content">
-      <img id="lightboxImg" src="" alt="Preview Foto">
+      <img id="lightboxImg" src="" alt="Preview gambar" />
       <p id="lightboxCaption"></p>
     </div>
-
-    <button class="lightbox-btn next" id="nextBtn" aria-label="Foto berikutnya">&#10095;</button>
+    <button id="nextBtn" class="lightbox-btn" aria-label="Berikutnya">❯</button>
   </div>
 
-  <footer class="footer">
-    <div class="container">
+  <footer class="border-t border-white/10 bg-black/10">
+    <div class="mx-auto w-full max-w-[1400px] px-4 py-6 text-center text-sm text-slate-400 sm:px-6 lg:px-8">
       <p>© 2026 Richardo Reksi Ratag.</p>
     </div>
   </footer>

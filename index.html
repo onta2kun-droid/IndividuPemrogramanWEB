@@ -3,231 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Biodata | Richardo Reksi Ratag</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Menu Utama | Richardo Reksi Ratag</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          boxShadow: {
+            soft: '0 20px 60px rgba(15, 23, 42, 0.18)'
+          }
+        }
+      }
+    }
+  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="bg-blur blur-1"></div>
-  <div class="bg-blur blur-2"></div>
+<body class="min-h-screen bg-slate-950 text-white overflow-x-hidden">
+  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.16),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.18),_transparent_28%),linear-gradient(to_bottom_right,_#020617,_#0f172a,_#020617)]"></div>
 
-  <header class="header">
-    <nav class="navbar container">
-      <a href="#home" class="logo">Richardo<span>.</span></a>
+  <main class="min-h-screen flex items-center justify-center px-6 py-12">
+    <section class="w-full max-w-5xl rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-soft p-8 md:p-14 text-center animate-fade-in-up">
+      <p class="inline-flex rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-sm font-medium text-sky-200">Tugas Individu Pemrograman Web</p>
+      <h1 class="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight">Richardo Reksi Ratag</h1>
+      <p class="mt-4 max-w-2xl mx-auto text-slate-300 text-base md:text-lg leading-8">
+        Halaman utama dibuat sederhana sesuai instruksi tugas. Silakan pilih salah satu tombol untuk membuka
+        halaman <span class="font-semibold text-white">Blog Saya</span>, <span class="font-semibold text-white">Kontak Saya</span>, atau <span class="font-semibold text-white">CV Saya</span>.
+      </p>
 
-      <ul class="nav-links">
-        <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#portofolio">Portofolio</a></li>
-        <li><a href="#youtube">YouTube</a></li>
-        <li><a href="#gallery-preview">Gallery</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-
-      <button class="menu-toggle" aria-label="Buka menu">☰</button>
-    </nav>
-  </header>
-
-  <main>
-    <section id="home" class="hero container reveal">
-      <div class="hero-text">
-        <p class="badge">Website Blog Pribadi</p>
-        <h1>Halo, Saya <span>Richardo Reksi Ratag</span></h1>
-
-        <div class="hero-buttons">
-          <a href="#portofolio" class="btn btn-primary">Lihat Portofolio</a>
-          <a href="#kontak" class="btn btn-secondary">Hubungi Saya</a>
-        </div>
-      </div>
-
-      <div class="hero-card floating">
-        <div class="profile-img">
-          <img src="profile.jpg" alt="Foto Profil Richardo Reksi Ratag">
-        </div>
-
-        <h3>Informasi Singkat</h3>
-        <ul>
-          <li><strong>Nama:</strong> Richardo Reksi Ratag</li>
-          <li><strong>Tanggal Lahir:</strong> 10 April 2006</li>
-          <li><strong>Tempat Lahir:</strong> Tanah Grogot</li>
-          <li><strong>Pendidikan:</strong> Mahasiswa Pendidikan Komputer</li>
-          <li><strong>Fakultas:</strong> FKIP Universitas Mulawarman</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="tentang" class="section container reveal">
-      <div class="section-title">
-        <p>Tentang Saya</p>
-        <h2>Biodata Singkat</h2>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-card card">
-          <h3>Profil</h3>
-          <p>
-            Perkenalkan Saya <strong>Richardo Reksi Ratag</strong>, lahir pada <strong>10 April 2006</strong>
-            di <strong>Tanah Grogot</strong>. Saat ini saya sedang menempuh pendidikan sebagai
-            <strong>Mahasiswa Pendidikan Komputer</strong> di <strong>FKIP Universitas Mulawarman</strong>.
-          </p>
-        </div>
-
-        <div class="about-card card">
-          <h3>Minat</h3>
-          <p>
-            Saya tertarik pada dunia teknologi, pengembangan web, serta pembuatan media dan sistem
-            yang dapat membantu proses belajar maupun kebutuhan digital sehari-hari. Saya juga tertarik di bidang cyber security di karenakan saya dulu pernah mengikuti Lomba Cyber Security sebagai siswa SMKN 1 Tanah Grogot.
-          </p>
-        </div>
-
-        <div class="about-card card">
-          <h3>Tujuan</h3>
-          <p>
-            Saya ingin terus mengembangkan kemampuan di bidang pemrograman, seperti menguasai backend dalam pembrograman, tetapi jika mungkin saya sanggup, saya ingin coba menjadi fullstack developer walaupun terdengar mustahil, saya juga masih antusias dengan bidang bidang Cyber Security dan ingin menguasai semua jenis jenis keamanan seperti di Networking.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="portofolio" class="section container reveal">
-      <div class="section-title">
-        <p>Portofolio & CV</p>
-        <h2>Keahlian dan Proyek</h2>
-      </div>
-
-      <div class="portfolio-layout">
-        <div class="card skill-card">
-          <h3>Keahlian</h3>
-          <div class="skills">
-            <span>Programming (Beginner)</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-
-            <span>Jaringan Komputer</span>
-            <span>Instalasi LAN/WAN</span>
-            <span>Mikrotik Basic</span>
-            <span>Konfigurasi Router</span>
-            <span>Subnetting</span>
-
-            <span>Cyber Security Basic</span>
-            <span>Network Security</span>
-            <span>Penetration Testing (Dasar)</span>
-            <span>Vulnerability Scanning</span>
-            <span>Linux Basic</span>
-
-            <span>Kali Linux</span>
-            <span>OWASP Basic</span>
-          </div>
-        </div>
-
-        <div class="card project-card">
-          <h3>Web Project</h3>
-          <div class="project-list">
-            <a class="project-item" href="https://compulab.my.id" target="_blank" rel="noopener noreferrer">
-              <h4>CompuLab</h4>
-              <p>Website proyek yang dapat dikunjungi melalui compulab.my.id</p>
-              <span>Kunjungi Website →</span>
-            </a>
-
-            <a class="project-item" href="https://knowos.my.id" target="_blank" rel="noopener noreferrer">
-              <h4>KnowOS</h4>
-              <p>Website proyek yang dapat dikunjungi melalui knowos.my.id</p>
-              <span>Kunjungi Website →</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="youtube" class="section container reveal">
-      <div class="section-title">
-        <p>Konten Edukasi</p>
-        <h2>Channel YouTube</h2>
-      </div>
-
-      <div class="youtube-card card">
-        <h3>Channel Saya</h3>
-        <p>
-          Saya juga membuat konten pembelajaran seputar pemrogramming dan cyber security.
-        </p>
-
-        <a href="https://youtube.com/@wessangel7134" target="_blank" class="btn btn-primary">
-          Kunjungi Channel
-        </a>
-      </div>
-
-      <div class="video-list">
-        <iframe src="https://www.youtube.com/embed/oXCtKDMfYO4?si=ml3kx0pu_amqfiAY" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/cs37wdgOKnU?si=bciXfYd6hRk9ROez" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/7qomr6xsMI0?si=yqg8r65cWnXzQ1RN" allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <section id="gallery-preview" class="section container reveal">
-      <div class="section-title">
-        <p>Galeri</p>
-        <h2>Foto & Dokumentasi</h2>
-      </div>
-
-      <div class="gallery-preview-card card">
-        <div class="gallery-preview-text">
-          <h3>Gallery Saya</h3>
-          <p>
-            Kumpulan foto dokumentasi, kegiatan, project, dan
-            momen lain yang ingin saya tampilkan.
-          </p>
-          <a href="gallery.html" class="btn btn-primary">Buka Gallery</a>
-        </div>
-
-        <div class="gallery-preview-grid">
-          <img src="images/foto1.jpg" alt="Preview Gallery 1">
-          <img src="images/foto2.JPG" alt="Preview Gallery 2">
-          <img src="images/foto3.JPG" alt="Preview Gallery 3">
-          <img src="images/foto4.JPG" alt="Preview Gallery 4">
-        </div>
-      </div>
-    </section>
-
-    <section id="kontak" class="section container reveal">
-      <div class="section-title">
-        <p>Kontak</p>
-        <h2>Hubungi Saya</h2>
-      </div>
-
-      <div class="contact-grid">
-        <a class="contact-card card" href="https://wa.me/6282255304228" target="_blank" rel="noopener noreferrer">
-          <div>
-            <h3>WhatsApp</h3>
-          </div>
-          <span>Chat Sekarang</span>
+      <div class="mt-10 grid gap-4 md:grid-cols-3">
+        <a href="blog.html" class="group rounded-2xl border border-sky-400/20 bg-sky-500/10 p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-300/40 hover:bg-sky-500/20">
+          <div class="text-4xl">📝</div>
+          <h2 class="mt-4 text-xl font-bold">Blog Saya</h2>
+          <p class="mt-2 text-sm leading-7 text-slate-300">Berisi konten YouTube edukasi, dokumentasi foto, dan aktivitas pembelajaran.</p>
+          <span class="mt-4 inline-block text-sm font-semibold text-sky-200 group-hover:text-white">Buka halaman →</span>
         </a>
 
-        <a class="contact-card card" href="https://instagram.com/rchrdo_clwn" target="_blank" rel="noopener noreferrer">
-          <div>
-            <h3>Instagram</h3>
-          </div>
-          <span>Lihat Profil</span>
+        <a href="kontak.html" class="group rounded-2xl border border-emerald-400/20 bg-emerald-500/10 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-300/40 hover:bg-emerald-500/20">
+          <div class="text-4xl">📞</div>
+          <h2 class="mt-4 text-xl font-bold">Kontak Saya</h2>
+          <p class="mt-2 text-sm leading-7 text-slate-300">Memuat informasi WhatsApp, Instagram, Gmail, dan beberapa foto pribadi.</p>
+          <span class="mt-4 inline-block text-sm font-semibold text-emerald-200 group-hover:text-white">Buka halaman →</span>
         </a>
-        <a class="contact-card card"
-          href="https://mail.google.com/mail/?view=cm&to=ratagrichardo@gmail.com&su=Kontak%20Website&body=Halo%20Richardo,%20saya%20ingin%20menghubungi%20Anda"
-          target="_blank">
-          <div>
-            <h3>Gmail</h3>
-          </div>
-          <span>Kirim Email</span>
+
+        <a href="cv.html" class="group rounded-2xl border border-violet-400/20 bg-violet-500/10 p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-300/40 hover:bg-violet-500/20">
+          <div class="text-4xl">📄</div>
+          <h2 class="mt-4 text-xl font-bold">CV Saya</h2>
+          <p class="mt-2 text-sm leading-7 text-slate-300">Menampilkan biodata, keahlian, portofolio, dan galeri foto pribadi.</p>
+          <span class="mt-4 inline-block text-sm font-semibold text-violet-200 group-hover:text-white">Buka halaman →</span>
         </a>
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 Richardo Reksi Ratag.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

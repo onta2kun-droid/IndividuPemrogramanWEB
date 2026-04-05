@@ -1,37 +1,19 @@
 const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-const navItems = document.querySelectorAll('.nav-links a');
-const reveals = document.querySelectorAll('.reveal');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-menu a');
 
-if (menuToggle && navLinks) {
+if (menuToggle && mobileMenu) {
   menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
+    mobileMenu.classList.toggle('hidden');
   });
 }
 
-navItems.forEach((item) => {
-  item.addEventListener('click', () => {
-    navLinks.classList.remove('show');
+mobileLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
   });
 });
 
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
-
-  reveals.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const revealPoint = 100;
-
-    if (elementTop < windowHeight - revealPoint) {
-      element.classList.add('active');
-    }
-  });
-}
-
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-
-/* GALLERY LIGHTBOX */
 const galleryItems = document.querySelectorAll('.gallery-item');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
@@ -47,7 +29,7 @@ if (galleryItems.length > 0 && lightbox && lightboxImg) {
     const item = galleryItems[index];
     lightboxImg.src = item.src;
     lightboxImg.alt = item.alt;
-    lightboxCaption.textContent = item.alt;
+    if (lightboxCaption) lightboxCaption.textContent = item.alt;
     currentIndex = index;
   }
 
@@ -73,34 +55,78 @@ if (galleryItems.length > 0 && lightbox && lightboxImg) {
   }
 
   galleryItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      openLightbox(index);
-    });
+    item.addEventListener('click', () => openLightbox(index));
   });
 
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeLightbox);
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', showNext);
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', showPrev);
-  }
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  if (nextBtn) nextBtn.addEventListener('click', showNext);
+  if (prevBtn) prevBtn.addEventListener('click', showPrev);
 
   lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
+    if (e.target === lightbox) closeLightbox();
   });
 
   document.addEventListener('keydown', (e) => {
     if (!lightbox.classList.contains('show')) return;
-
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowRight') showNext();
     if (e.key === 'ArrowLeft') showPrev();
+  });
+}
+const certificateCards = document.querySelectorAll('.certificate-card');
+const pdfModal = document.getElementById('pdfModal');
+const pdfViewer = document.getElementById('pdfViewer');
+const pdfModalTitle = document.getElementById('pdfModalTitle');
+const pdfModalClose = document.getElementById('pdfModalClose');
+
+if (certificateCards.length > 0 && pdfModal && pdfViewer) {
+  function openPdfModal(pdfPath, title) {
+    const resolvedPdfUrl = new URL(pdfPath, window.location.href).href;
+
+    if (pdfModalTitle) {
+      pdfModalTitle.textContent = title || 'Preview Sertifikat';
+    }
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      window.open(resolvedPdfUrl, '_blank');
+      return;
+    }
+
+    pdfViewer.src = resolvedPdfUrl + '#toolbar=0&navpanes=0&scrollbar=1';
+    pdfModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePdfModal() {
+    pdfModal.classList.remove('show');
+    pdfViewer.src = '';
+    document.body.style.overflow = '';
+  }
+
+  certificateCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const pdfPath = card.getAttribute('data-pdf');
+      const title = card.getAttribute('data-title');
+      console.log('PDF dibuka:', pdfPath);
+      openPdfModal(pdfPath, title);
+    });
+  });
+
+  if (pdfModalClose) {
+    pdfModalClose.addEventListener('click', closePdfModal);
+  }
+
+  pdfModal.addEventListener('click', (e) => {
+    if (e.target === pdfModal) {
+      closePdfModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (pdfModal.classList.contains('show') && e.key === 'Escape') {
+      closePdfModal();
+    }
   });
 }
